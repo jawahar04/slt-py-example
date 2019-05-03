@@ -7,6 +7,7 @@ shape classes.
 
 from shapes.rectangle import Rectangle
 from shapes.circle import Circle
+from shapes.triangle import Triangle
 
 def test_rectangle():
     """
@@ -41,3 +42,24 @@ def test_circle():
     assert radius8.perimeter() == 50.27
     assert radius5.diameter() == 10
     assert radius8.diameter() == 16
+
+def test_triangle():
+    """
+    Defines tests on some specific triangle objects
+    """
+    side8side10side15 = Triangle(8, 10, 15)
+    side10side12side15 = Triangle(10, 12, 15)
+    side5side5side5 = Triangle(5, 5, 5)
+
+    # Test areas, parameters, and equivalateral triangle
+    assert round(side8side10side15.area()) == 37
+    assert round(side10side12side15.area()) == 60
+    assert round(side5side5side5.area()) == 11
+
+    assert side8side10side15.perimeter() == 33
+    assert side10side12side15.perimeter() == 37
+    assert side5side5side5.perimeter() == 15
+    assert not side8side10side15.is_equilateral()
+    assert not side10side12side15.is_equilateral()
+    assert side5side5side5.is_equilateral()
+

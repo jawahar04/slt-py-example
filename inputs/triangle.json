@@ -1,0 +1,19 @@
+{
+  "triangle_list": [
+    {
+      "side1": 8,
+      "side2": 10,
+      "side3": 15
+    },
+    {
+      "side1": 10,
+      "side2": 12,
+      "side3": 15
+    },
+    {
+      "side1": 5,
+      "side2": 5,
+      "side3": 5
+    }
+  ]
+}
